@@ -1,0 +1,15 @@
+#app {
+  max-width: 896px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+#text-helper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #FFC700;
+  border-radius: 5px;
+  padding: 10px;
+}
+

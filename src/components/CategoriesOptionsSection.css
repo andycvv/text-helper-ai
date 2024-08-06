@@ -1,0 +1,35 @@
+.categories-options-section {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  padding: 0;
+  list-style: none;
+
+  > li {
+    display: block;
+    list-style: none;
+    width: calc(100% / 4);
+
+    > button {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      background-color: #1C1A09;
+      padding: 0;
+      outline: none;
+      border: 0;
+      color: #fff;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      transition: background-color .3s;
+
+      &:hover {
+        background-color: #32301a;
+      }
+
+      &:active {
+        background-color: #89844a;
+      }
+    }
+  }
+}
