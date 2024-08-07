@@ -55,6 +55,7 @@ function App () {
         <CategoriesSection
           setCategory={setCategory}
           setOption={setOption}
+          loading={loading}
         />
         <ContextInput
           setContext={setContext}

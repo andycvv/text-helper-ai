@@ -6,9 +6,10 @@ import './CategoriesSection.css'
 interface Props {
   setCategory: (category: Category) => void
   setOption: (option: Option<Category>) => void
+  loading: boolean
 }
 
-export const CategoriesSection = ({ setCategory, setOption }: Props) => {
+export const CategoriesSection = ({ setCategory, setOption, loading }: Props) => {
   return (
     <ul className="categories-section">
       {
@@ -19,6 +20,7 @@ export const CategoriesSection = ({ setCategory, setOption }: Props) => {
               category={key as Category}
               setCategory={setCategory}
               setOption={setOption}
+              loading={loading}
             />
           </li>
         ))

@@ -1,5 +1,6 @@
 import { type Category, NoneOption, Option } from "../types.d"
 import { NONE_OPTION } from '../data/constants'
+import { getResult } from "../logic/getResult"
 
 export async function translate ({
   text,
@@ -27,20 +28,7 @@ export async function translate ({
     Texto modificado:
   `
 
-  const result = await fetch('https://walrus-app-4egkd.ondigitalocean.app/api/openai', {
-    method: 'POST',
-    body: JSON.stringify({
-      prompt
-    }),
-    headers: { 'Content-Type': 'application/json' } 
-  })
-    .then(res => res.json())
-    .then(data => {
-      return data
-    })
-    .catch(() => {
-      return 'Error en la solicitud'
-    })
+  const result = await getResult({ prompt })
 
   return result
 }

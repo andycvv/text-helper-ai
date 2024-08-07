@@ -6,9 +6,10 @@ interface Props {
   category: Category
   setCategory: (category: Category) => void
   setOption: (option: Option<Category>) => void
+  loading: boolean
 }
 
-export const CategoriesOptionsSection = ({ category, setCategory, setOption }: Props) => {
+export const CategoriesOptionsSection = ({ category, loading, setCategory, setOption }: Props) => {
   const options = CATEGORIES_OPTIONS[category]
 
   const handleClick = (key: Option<Category>) => {
@@ -24,6 +25,7 @@ export const CategoriesOptionsSection = ({ category, setCategory, setOption }: P
             <button
               onClick={() => handleClick(key as Option<Category>)}
               value={key}
+              disabled={loading}
             >
               {label}
             </button>

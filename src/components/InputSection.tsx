@@ -22,7 +22,7 @@ export const InputSection = ({ setText, text, loading }: Props) => {
         }}
         onChange={handleChange}
         value={loading ? 'Cargando...' : text}
-        disabled={loading ? true : false}
+        disabled={loading}
         placeholder="Escribe algo"
       />
     </div>

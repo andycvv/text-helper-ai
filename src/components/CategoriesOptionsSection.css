@@ -21,7 +21,8 @@
       width: 100%;
       height: 100%;
       cursor: pointer;
-      transition: background-color .3s;
+      opacity: 1;
+      transition: all .3s;
 
       &:hover {
         background-color: #32301a;
@@ -29,6 +30,11 @@
 
       &:active {
         background-color: #89844a;
+      }
+
+      &:disabled {
+        opacity: 0.8;
+        pointer-events: none;
       }
     }
   }

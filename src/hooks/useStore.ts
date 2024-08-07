@@ -60,7 +60,9 @@ function reducer (state: State, action: Action): State {
   }
 
   if(type === 'CHANGE_CONTEXT') {
-    const loading = state.filters.option !== NONE_OPTION
+    const loading = 
+      state.filters.option !== NONE_OPTION && 
+      state.text.trim() !== ''
 
     return {
       ...state,
